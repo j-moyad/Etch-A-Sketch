@@ -1,0 +1,35 @@
+body {
+    width: 642px;
+    text-align: center;
+}
+.row {
+    clear: both;
+}
+.cell {
+    border: none;
+    float: left;
+}
+
+.left {
+    border-left: 1px solid black;
+}
+
+.right {
+    border-right: 1px solid black;
+}
+
+.top {
+    border-top: 1px solid black;
+}
+
+.bottom {
+    border-bottom: 1px solid black;
+}
+
+.color {
+    background-color: #2092F0;
+}
+
+input {
+    margin: 10px auto;
+}
