@@ -3,6 +3,10 @@ $(document).ready( function() {
     function createGrid(cells) {
         $('div').remove();
         
+        $('body').bind('mousedown selectstart', function(event) {
+            event.preventDefault();
+        });
+        
         for(var i=0; i<cells; i++) {
             $('body').append('<div class="row"></div>');
         }
