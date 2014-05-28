@@ -1,14 +1,15 @@
 $(document).ready( function() {
     
     function createGrid(cells) {
-        $('div').remove();
+        $('.cell').remove();
+        $('.row').remove();
         
         $('body').bind('mousedown selectstart', function(event) {
             event.preventDefault();
         });
         
         for(var i=0; i<cells; i++) {
-            $('body').append('<div class="row"></div>');
+            $('#sketch').append('<div class="row"></div>');
         }
         for(var j=0; j<cells;j++) {
             $('.row').append('<div class="cell"></div>');
@@ -19,7 +20,7 @@ $(document).ready( function() {
         
         $('.cell:first-child').addClass('left');
         $('.cell:last-child').addClass('right');
-        $('.row:nth-child(4)').children().addClass('top');
+        $('.row:first-child').children().addClass('top');
         $('.row:last-child').children().addClass('bottom');
         
         var isDown = false;
@@ -28,12 +29,28 @@ $(document).ready( function() {
             isDown = true;
         })
         $(document).mouseup(function() {
-            isDown = false; 
+            isDown = false;
         });
       
         $('.cell').on('mouseenter', function(event) {
             if(isDown)
                 $(this).addClass('color');
+        });
+        
+        $('.cell').on('mouseover', function(event) {
+            $(this).css('background-color', '#0933AF');
+        });
+        
+        $('.cell').on('mouseout', function(event) {
+            $(this).css('background-color', 'none');
+        });
+        
+        $('.cell').on('mousedown', function(event) {
+            $(this).addClass('color');
+        });
+        
+        $('.cell').on('click', function(event) {
+            $(this).addClass('color');
         });
         
         $('.cell').on('dblclick', function(event) {

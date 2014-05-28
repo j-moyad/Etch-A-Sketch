@@ -1,29 +1,42 @@
 body {
-    width: 642px;
     text-align: center;
+    background-color: #A73333;
 }
+
+#instructions {
+    float: left;
+    width: 30%;
+}
+
+p, input {
+    font-family: Ubuntu, Arial, Verdana, sans;
+    font-size: 22px;
+}
+
+#sketch {
+    width: 642px;
+    padding: 50px;
+    padding-top: 10px;
+    border-radius: 50px;
+    background-color: red;
+    font-family: 'Satisfy', cursive;
+    box-shadow: 20px 20px 10px #383838;
+    float: left;
+}
+
+h1 {
+    font-size: 50px;
+    color: white;
+    margin: 20px auto;
+}
+
 .row {
     clear: both;
 }
 .cell {
     border: none;
     float: left;
-}
-
-.left {
-    border-left: 1px solid black;
-}
-
-.right {
-    border-right: 1px solid black;
-}
-
-.top {
-    border-top: 1px solid black;
-}
-
-.bottom {
-    border-bottom: 1px solid black;
+    background-color: white;
 }
 
 .color {
@@ -32,4 +45,8 @@ body {
 
 input {
     margin: 10px auto;
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 3px solid #1E90FF;
+    background-color: #E8AF38;
 }
